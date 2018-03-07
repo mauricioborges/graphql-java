@@ -1,0 +1,39 @@
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.10.RELEASE'
+    }
+
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+dependencies {
+
+    compile 'com.graphql-java:graphql-spring-boot-starter:3.9.2'
+    compile 'com.graphql-java:graphiql-spring-boot-starter:3.9.2'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'com.graphql-java:graphql-java-tools:4.3.0'
+    testCompile 'junit:junit:4.12'
+}
+
+
+ bootRun {
+     args  '--debug'
+ }
